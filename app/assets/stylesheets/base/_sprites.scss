@@ -1,0 +1,9 @@
+.twitter-icon { @include use-sprite(twitter); }
+.youtube-icon { @include use-sprite(youtube); }
+.slack-icon { @include use-sprite(slack); }
+.googleplus-icon { @include use-sprite(googleplus); }
+
+.twitter-post-icon { @include use-sprite(twitter-post,false,false,false,true); }
+.podcast-post-icon { @include use-sprite(podcast-post,false,false,false,true); }
+
+.more-arrow { @include use-sprite(more-arrow); }

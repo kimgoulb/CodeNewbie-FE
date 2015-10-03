@@ -1,0 +1,104 @@
+/* Base
+----------------------------------------------*/
+* { margin:0; padding: 0; outline:0; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+html {
+	height:100%;
+}
+body {color: $mdgrey; background-color: #fff; @include OSLt(); font-size: 100%; height:100%; -webkit-font-smoothing:antialiased; }
+
+html.locked, body.locked { overflow: hidden; }
+
+p, li, dd { line-height: 1.5em; }
+em, i, cite {  }
+strong, b { }
+sup { }
+sub { }
+mark { }
+dt {}
+dd { }
+
+blockquote { }
+::selection { background-color:#ddd; }
+
+::-webkit-input-placeholder { color: #ebebeb; }
+:-moz-placeholder {color: #ebebeb; }
+::-moz-placeholder {color: #ebebeb; }
+:-ms-input-placeholder {color: #ebebeb; }
+
+/* Headings
+----------------------------------------------*/
+h1 {font-size: emCal(50px); line-height: 60px; @include RobotoBold(); color:$drkgrey;
+	@include respond-to(mobile) { font-size: emCal(35px); line-height: 45px; }
+}
+h2 {font-size: emCal(30px); line-height: 40px; @include RobotoBold(); color:$drkgrey;
+	@include respond-to(mobile) { font-size: emCal(20px); line-height: 25px; }
+}
+h3 {font-size: emCal(25px); line-height: 35px; @include RobotoMed(); color:$drkgrey;
+	@include respond-to(mobile) { font-size: emCal(18px); line-height: 24px; }
+}
+h4 {font-size: emCal(18px); line-height: 28px; @include RobotoMed(); color:$drkgrey; }
+h5 {font-size: emCal(16px); line-height: 25px; @include RobotoMed(); color:$drkgrey; }
+h6 {font-size: emCal(14px); line-height: 20px; @include RobotoBk(); color:$drkgrey; }
+p { font-size: emCal(20px); line-height: 30px; color: $mdgrey;
+	@include respond-to(mobile) {
+		font-size: emCal(16px); line-height: 24px;
+	}
+}
+
+.rbldup { @include RobotoBold(); font-size: emCal(13px); line-height: 13px; letter-spacing: 0.75px; text-transform: uppercase; }
+
+/* links
+----------------------------------------------*/
+a, a:link, a:visited {text-decoration: none; color: $drkgrey;
+	.carat { font-size: 130%; }
+}
+a:hover, a:active {text-decoration: none; color: $mdgrey; }
+
+/* Blockquote
+----------------------------------------------*/
+blockquote {font-size: emCal(35px); line-height: 45px; text-align: center; color:#333; }
+
+/* Media 
+----------------------------------------------*/
+img, video {width: 100%; height: auto; margin: 0 auto; display: block; }
+figcaption {font-size: 85%; }
+
+/* Lists
+----------------------------------------------*/
+ul, ol { margin:0; padding: 0; list-style: none; }
+
+
+/* Videos
+----------------------------------------------*/
+.video_wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ height:0; overflow:hidden;
+  video, embed, iframe { display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+}
+
+/* Buttons
+----------------------------------------------*/
+.simple-btn { width:auto; padding:0 20px; height:40px; line-height:35px; text-align:center; display: inline-block; color:#fff; background-color: $green; cursor: pointer;
+	&:link, &:visited { color:#fff; }
+	&:hover { background-color: $drkgreen; }
+
+	&.white { background-color: #fff; color:$green; border:solid 2px #fff;
+		&:link, &:visited { color:$green; }
+		&:hover { background-color: transparent; color:#fff; }
+	}
+}
+
+/* Form
+----------------------------------------------*/
+form { 
+	input { 
+		border:0;
+		outline: 0;
+		background-color: transparent;
+		margin:10px auto;
+	}
+}
+
+/* Iframe
+----------------------------------------------*/
+iframe {width:100%; height: auto; }

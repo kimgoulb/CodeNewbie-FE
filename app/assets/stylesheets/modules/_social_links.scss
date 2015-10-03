@@ -1,0 +1,44 @@
+.social-links { 
+  width:100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: $green;
+  padding:0 35px;
+
+  @include respond-to(mobile) {
+    text-align: center;
+  }
+
+  .social-txt {
+    float: left;
+
+    .rbldup { 
+      color:#fff;
+    }
+
+    @include respond-to(mobile) {
+      display: none; 
+    }
+
+    .hideable {
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+
+  }
+  .social-icons {
+    float: right;
+
+    @include respond-to(mobile) {
+      float: none;
+    }
+
+    a:link, a:visited {
+      display: inline-block;
+      vertical-align: middle;
+      margin:0 12px;
+      line-height: 18px;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+header { 
+  background-color: $green;
+  position: fixed;
+  z-index: 9999;
+  top:0;
+  left:0;
+  width:100%;
+  height: 60px;
+  line-height: 60px;
+  color:#fff;
+
+  @include respond-to(mobile) {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .logo {
+    float: left;
+    padding-left:30px;
+
+    @include respond-to(mobile) {
+      padding-left:20px;
+    }
+
+    .txt-logo {
+      @include RobotoBold();
+      font-size: 20px;
+      line-height: 20px;
+      display: inline-block;
+      color:#fff;
+
+      @include respond-to(mobile) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .nav-wrapper {
+
+    @include respond-to(mobile) {
+      overflow: hidden;
+    }
+
+    .menu-btn {
+      display: none; 
+
+      @include respond-to(mobile) {
+         display: block;
+         float: right;
+         padding-right: 20px;
+         line-height: 35px;
+         cursor: pointer;
+      }
+
+      .hamburger {
+        width: 10px;
+        display: inline-block;
+        margin-right: 4px;
+        vertical-align: middle;
+
+        span {
+          width: 10px;
+          height: 3px;
+          background-color: #fff;
+          display: block;
+          @include transition(transform .2s);
+
+          &:first-child {
+            margin-bottom: 3px;
+          }
+        }
+
+      }
+
+      &.open {
+        .hamburger {
+          span {
+            @include transform(rotate(-90deg));
+
+            &.two {
+              margin-left: 7px;
+              margin-top: -6px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-nav {
+    float:right; 
+
+    @include respond-to(mobile) {
+      float: none;
+      width:100%;
+      position: relative;
+      background-color: $green;
+      height: 0;
+      overflow: hidden;
+      @include transition(height .2s);
+    }
+
+    &.open {
+      @include respond-to(mobile) {
+        height: 260px;
+      }
+    }
+
+    ul {
+      @include respond-to(mobile) {
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 60px;
+        margin-left:-4px;
+
+        @include respond-to(mobile) {
+          display: block;
+          line-height: 30px;
+        }
+
+        a:link, a:visited {
+          padding:0 15px;
+          display: block;
+          color:#fff;
+
+          @include respond-to(mobile) {
+            padding: 5px 0;
+          }
+        }
+
+        a:hover {
+          background-color: $drkgreen;
+        }
+
+        &.join-btn {
+          background-color: $drkgrey;
+
+          @include respond-to(mobile) {
+            line-height: 40px;
+          }
+
+          a:link, a:visited {
+            padding:0 30px;
+
+            @include respond-to(mobile) {
+              padding: 5px 0;
+            }
+          }
+
+          a:hover {
+            background-color: #222;
+          }
+        }
+
+      }
+    }
+  }
+
+  .social-links {
+    display: none; 
+
+    @include respond-to(mobile) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.breaker {
+  background-color: $green;
+  width:100%;
+  padding: 35px 30px;
+  text-align: center;
+
+  h3 {
+    font-size: emCal(22px);
+    line-height: 30px;
+    color:#fff;
+  }
+  p {
+    max-width: 500px;
+    margin:0 auto 15px;
+    font-size: emCal(18px);
+    line-height: 25px;
+    color:#fff;
+  }
+
+  &.newsletter-module {
+    .newsletter {
+      .input-wrapper {
+        overflow: hidden;
+        width: 100%;
+        max-width: 500px;
+        margin:20px auto 0;
+        position: relative;
+
+        .nemail {
+          border:solid 2px #fff;
+          padding: 0 130px 0 10px;
+          height: 40px;
+          width: 100%;
+          font-size: 15px;
+          line-height: 40px;
+          color:#fff;
+          @include OSBk();
+        }
+        .nsubscribe {
+          position: absolute;
+          top:0;
+          right:0;
+          width:120px;
+        }
+      }
+    }
+  }
+}

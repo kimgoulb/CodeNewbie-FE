@@ -1,0 +1,19 @@
+<%= render partial: "home/sidebar" %>
+<div class="page content-wrapper home-page" data-page="home">
+  <div class="feed">
+
+    <% @feed.each_with_index do |post, p| %>
+      <%= render partial: "modules/post", locals: {post: post} %>
+
+      <% if p === 2 %>
+        <%= render partial: "breakers/donate" %>
+      <% end %>
+
+      <% if p === 5 %>
+        <%= render partial: "breakers/newsletter" %>
+      <% end %>
+
+    <% end %>
+
+  </div>
+</div>

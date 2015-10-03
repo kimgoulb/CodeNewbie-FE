@@ -1,0 +1,268 @@
+.sidebar {
+  // width:35%;
+  width: 440px;
+  height: 100%;
+  position: fixed;
+  top:0;
+  right:0;
+  background-color: $ltgrey;
+  z-index: 8888;
+  overflow: auto;
+
+  @include respond-to(tablet) {
+    width:380px;
+  }
+
+  @include respond-to(mobile) {
+    width:100%;
+    height: auto;
+    position: static;
+  }
+
+  .inner-wrapper {
+    padding-top: 60px;
+
+    @include respond-to(mobile) {
+      padding-top: 40px;
+    }
+  }
+
+  .main-top {
+    background-color: #EEECEC;
+    padding: 30px 35px;
+
+    @include respond-to(mobile) {
+      padding: 30px 25px;
+    }
+  }
+
+  h3 {
+    font-size: emCal(18px);
+    line-height: 25px;
+    overflow: hidden;
+
+    @include respond-to(mobile) {
+      font-size: emCal(16px);
+      line-height: 22px;
+    }
+
+    .title-link {
+      font-size: 12px;
+      line-height: 25px;
+      float:right;
+    }
+
+    .more-arrow {
+      float: right;
+      margin:5px 0;
+      cursor: pointer;
+
+      &.open {
+        @include transform(rotate(-180deg));
+      }
+    }
+  }
+
+  .toggle-child {
+    @include respond-to(desktopLg) { display: block !important; }
+    @include respond-to(desktopSm) { display: block !important; }
+    @include respond-to(tablet) { display: block !important; }
+    @include respond-to(mobile) {
+      display: none;
+      overflow: hidden;
+    }
+  }
+
+  // home sidebar
+  &.home {
+    .top {
+
+      .main-top {
+        padding:30px 40px; 
+
+        @include respond-to(mobile) {
+          padding: 30px 25px;
+        }
+      }
+
+      .info {
+        p { text-align: center;
+          strong { color:$green; }
+        }
+      }
+      .newbies-wrapper {
+        text-align: center; 
+      }
+      .newbies { 
+        margin: 20px auto;
+
+        .newbie {
+          display: inline-block;
+          width:55px;
+          height: 55px;
+          @include border-radius(100px);
+          margin: 0 5px;
+          background-color: #999;
+          overflow: hidden;
+
+          @include respond-to(mobile) {
+            width:35px;
+            height: 35px;
+          }
+        }
+      }
+      .members-link {
+        color:$drkgrey;
+        border-bottom: 1px solid $drkgrey;
+
+        &:hover {
+          color:$mdgrey;
+          border-color:$mdgrey;
+        }
+      }
+
+      .rules {
+        padding:30px 35px;
+        overflow: hidden;
+
+        @include respond-to(mobile) {
+          padding: 25px;
+        }
+
+        h3 {
+          .title-link {
+            @include respond-to(mobile) {
+              display: none;
+            }
+          }
+          .more-arrow {
+            display: none;
+
+            @include respond-to(mobile) {
+              display: inline-block;
+            }
+          }
+        }
+        
+
+        ol {
+          padding:25px 0 0;
+
+          li {
+            counter-increment: step-counter;
+            color:$drkgrey;
+            font-size: emCal(16px);
+            line-height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left:10px;
+
+            @include respond-to(mobile) {
+              width: 50%;
+              display: block;
+              float: left;
+              margin: 0 0 10px;
+
+            }
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &.link {
+              display: none;
+
+              @include respond-to(mobile) {
+                display: block;
+                line-height: 30px;
+                padding-left: 5px;
+              } 
+
+              &:before {
+                display: none;
+              }
+            }
+          }
+
+          li:before {
+            text-align: center;
+            content: counter(step-counter);
+            @include border-radius(100px);
+            display: inline-block;
+            width:30px;
+            height: 30px;
+            margin-right: 8px;
+            font-size: emCal(16px);
+            line-height: 25px;
+            border:solid 2px $green;
+            color:$green;
+            @include RobotoBk();
+          }
+        }
+      }
+    }
+
+    .btm {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding:0;
+      border-top: solid 2px #EEECEC;
+
+      @media all and (max-height: 730px) {
+        position: static;
+      }
+      @include respond-to(mobile) {
+        position: static;
+      }
+
+      .meetups {
+        position: relative;
+        overflow: hidden;
+
+        @media all and (max-height: 730px) {
+          padding-bottom: 50px;
+        }
+
+        h3 {
+          position: absolute;
+          top:25px;
+          left:40px;
+
+          @include respond-to(mobile) {
+            position: static;
+            padding: 25px;
+          }
+
+          .more-arrow {
+            display: none;
+
+            @include respond-to(mobile) {
+              display: inline-block;
+            }
+          }
+        }
+        .img-wrapper {
+          img {
+            max-width: 320px;
+          }
+        }
+      }
+
+      .social-links {
+        @media all and (max-height: 730px) {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          width:435px;
+        }
+
+        @include respond-to(mobile) {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+}

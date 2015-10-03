@@ -1,0 +1,115 @@
+.post {
+  padding:60px;
+  border-bottom: solid 2px $ltgrey;
+
+  @include respond-to(mobile) {
+    padding:30px;
+  }
+
+  h2 {
+    margin-top: 5px;
+  }
+
+  p {
+    margin:20px 0;
+  }
+
+  .tags {
+    span, a:link, a:visited {
+      color:$blue;
+    }
+    a:hover {
+      color:$mdgrey;
+    }
+  }
+
+  .post-head {
+
+  }
+
+  .post-meta {
+    overflow: hidden;
+
+    .author {
+      float: left;
+
+      .author-img {
+        width:30px;
+        height: 30px;
+        @include border-radius(60px);
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+      h5 {
+        font-size: emCal(16px);
+        line-height: 30px;
+        @include RobotoMed();
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .date {
+        font-size: 13px;
+      }
+      
+    }
+
+    .continue {
+      float: right;
+      line-height: 30px;
+    }
+  }
+
+  &.type-twitter,
+  &.type-podcast {
+
+    .post-head {
+      position: relative;
+
+      .icon { 
+        position: absolute;
+        top:0;
+        left:0;
+      }
+
+      .title-wrapper {
+        padding-left: 70px;
+
+        @include respond-to(mobile) {
+          padding-left: 45px;
+        }
+      }
+    }
+
+    h2 {
+      color:$green;
+
+      .guest {
+        @include RobotoBk();
+      }
+    }
+
+    .tags {
+      span, a:link, a:visited {
+        color:$drkgreen;
+      }
+      a:hover {
+        color:$mdgrey;
+      }
+    }
+
+    .post-meta {
+      .continue {
+        float:none;
+
+        a:link, a:visited {
+          color:$drkgreen;
+        }
+        a:hover {
+          color:$mdgrey;
+        }
+      }
+    }
+  }
+}

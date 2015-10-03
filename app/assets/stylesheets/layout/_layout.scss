@@ -1,0 +1,7 @@
+.content-wrapper {
+  padding-top: 60px;
+
+  @include respond-to(mobile) {
+    padding-top: 0;
+  }
+}
