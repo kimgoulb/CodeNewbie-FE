@@ -8,8 +8,13 @@ class HomeController < ApplicationController
         'preview' => 'Ayori Selassie talks to us about how she navigated her career at Salesforce, moving seamlessly across different roles developing her technical and management skills.',
         'guest' => {
           'name' => 'Ayori Selassie',
-          'photo' => '',
-        }        
+          'photo' => ''
+        },
+        'author' => {
+          'name' => 'Niky Hernandez',
+          'photo' => 'https://pbs.twimg.com/profile_images/579079899656241152/g5xBru60_400x400.jpg'
+        },
+        'date' => 'Sept 25, 2015'   
       },
       {
         'type' => 'blog',
@@ -24,7 +29,12 @@ class HomeController < ApplicationController
       {
         'type' => 'twitter',
         'title' => 'Coding Remotely',
-        'preview' => 'In Ep 53 "Peruvian Developer" we discovered that a big part of Andrea\'s journey involved coding remotely. So we wanted to talk to you about it. Have you ever worked remotely, coding or otherwise?'
+        'preview' => 'In Ep 53 "Peruvian Developer" we discovered that a big part of Andrea\'s journey involved coding remotely. So we wanted to talk to you about it. Have you ever worked remotely, coding or otherwise?',
+        'author' => {
+          'name' => 'Niky Hernandez',
+          'photo' => 'https://pbs.twimg.com/profile_images/579079899656241152/g5xBru60_400x400.jpg'
+        },
+        'date' => 'Sept 25, 2015' 
       },
       {
         'type' => 'blog',
@@ -49,7 +59,12 @@ class HomeController < ApplicationController
       {
         'type' => 'twitter',
         'title' => 'Coding Remotely',
-        'preview' => 'In Ep 53 "Peruvian Developer" we discovered that a big part of Andrea\'s journey involved coding remotely. So we wanted to talk to you about it. Have you ever worked remotely, coding or otherwise?'
+        'preview' => 'In Ep 53 "Peruvian Developer" we discovered that a big part of Andrea\'s journey involved coding remotely. So we wanted to talk to you about it. Have you ever worked remotely, coding or otherwise?',
+        'author' => {
+          'name' => 'Niky Hernandez',
+          'photo' => 'https://pbs.twimg.com/profile_images/579079899656241152/g5xBru60_400x400.jpg'
+        },
+        'date' => 'Sept 25, 2015' 
       },
       {
         'type' => 'blog',

@@ -22,6 +22,11 @@
     <p><%= post['preview'] %></p>
   </div>
   <div class="post-meta">
+    <div class="author"> 
+      <span class="author-img"><img src="<%= post['author']['photo'] %>" /></span>
+      <h5><span class="author-name"><%= post['author']['name'] %></span>&nbsp;&nbsp;<span class="date">|&nbsp;&nbsp;<%= post['date'] %></span></h5>
+    </div>
+
     <% if post['type'] === 'podcast' %>
       <div class="continue">
         <a href="" class="rbldup">Listen to Episode <span class="carat">></span></a>
@@ -31,10 +36,6 @@
         <a href="" class="rbldup">Join the Conversation <span class="carat">></span></a>
       </div>
     <% else %>
-      <div class="author"> 
-        <span class="author-img"><img src="<%= post['author']['photo'] %>" /></span>
-        <h5><span class="author-name"><%= post['author']['name'] %></span>&nbsp;&nbsp;<span class="date">|&nbsp;&nbsp;<%= post['date'] %></span></h5>
-      </div>
       <div class="continue">
         <a href="" class="rbldup">Continue Reading <span class="carat">></span></a>
       </div>

@@ -1,6 +1,14 @@
 .post {
-  padding:60px;
+  padding:50px 60px;
   border-bottom: solid 2px $ltgrey;
+
+  @media all and (min-width:1441px) {
+    padding: 50px 110px;
+  }
+
+  @include respond-to(tablet) {
+    padding:35px;
+  }
 
   @include respond-to(mobile) {
     padding:30px;
@@ -33,6 +41,13 @@
     .author {
       float: left;
 
+      @include respond-to(tablet) {
+        float: none;
+      }
+      @include respond-to(mobile) {
+        float: none;
+      }
+
       .author-img {
         width:30px;
         height: 30px;
@@ -58,6 +73,16 @@
     .continue {
       float: right;
       line-height: 30px;
+
+      @include respond-to(tablet) {
+        float: none;
+        margin-top: 10px;
+      }
+      
+      @include respond-to(mobile) {
+        float: none;
+        margin-top: 10px;
+      }
     }
   }
 
@@ -101,7 +126,7 @@
 
     .post-meta {
       .continue {
-        float:none;
+        // float:none;
 
         a:link, a:visited {
           color:$drkgreen;

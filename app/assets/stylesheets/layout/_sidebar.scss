@@ -31,6 +31,9 @@
     background-color: #EEECEC;
     padding: 30px 35px;
 
+    @include respond-to(tablet) {
+      padding: 30px 28px;
+    }
     @include respond-to(mobile) {
       padding: 30px 25px;
     }
@@ -80,6 +83,10 @@
       .main-top {
         padding:30px 40px; 
 
+        @include respond-to(tablet) {
+          padding: 30px 35px;
+        }
+
         @include respond-to(mobile) {
           padding: 30px 25px;
         }
@@ -105,6 +112,10 @@
           background-color: #999;
           overflow: hidden;
 
+          @include respond-to(tablet) {
+            width:45px;
+            height: 45px;
+          }
           @include respond-to(mobile) {
             width:35px;
             height: 35px;
@@ -124,6 +135,10 @@
       .rules {
         padding:30px 35px;
         overflow: hidden;
+
+        @include respond-to(tablet) {
+          padding: 30px 28px;
+        }
 
         @include respond-to(mobile) {
           padding: 25px;
@@ -156,6 +171,10 @@
             display: inline-block;
             vertical-align: middle;
             margin-left:10px;
+
+            @include respond-to(tablet) {
+              margin-left: 5px;
+            }
 
             @include respond-to(mobile) {
               width: 50%;
@@ -197,6 +216,14 @@
             border:solid 2px $green;
             color:$green;
             @include RobotoBk();
+
+            @include respond-to(tablet) {
+              margin-right: 4px;
+              width: 25px;
+              height: 25px;
+              line-height: 20px;
+              font-size: 15px;
+            }
           }
         }
       }
@@ -224,10 +251,18 @@
           padding-bottom: 50px;
         }
 
+        @media all and (max-height: 730px) and (max-width: 767px) {
+          padding-bottom: 0px;
+        }
+
         h3 {
           position: absolute;
           top:25px;
-          left:40px;
+          left:35px;
+
+          @include respond-to(tablet) {
+            left:28px;
+          }
 
           @include respond-to(mobile) {
             position: static;
@@ -254,9 +289,12 @@
           position: fixed;
           right: 0;
           bottom: 0;
-          width:435px;
+          width:440px;
         }
 
+        @include respond-to(tablet) {
+          width:380px;
+        }
         @include respond-to(mobile) {
           display: none;
         }

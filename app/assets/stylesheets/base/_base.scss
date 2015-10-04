@@ -30,21 +30,23 @@ blockquote { }
 /* Headings
 ----------------------------------------------*/
 h1 {font-size: emCal(50px); line-height: 60px; @include RobotoBold(); color:$drkgrey;
+	@include respond-to(tablet) { font-size: emCal(45px); line-height: 55px; }
 	@include respond-to(mobile) { font-size: emCal(35px); line-height: 45px; }
 }
 h2 {font-size: emCal(30px); line-height: 40px; @include RobotoBold(); color:$drkgrey;
+	@include respond-to(tablet) { font-size: emCal(25px); line-height: 32px; }
 	@include respond-to(mobile) { font-size: emCal(20px); line-height: 25px; }
 }
 h3 {font-size: emCal(25px); line-height: 35px; @include RobotoMed(); color:$drkgrey;
+	@include respond-to(tablet) { font-size: emCal(22px); line-height: 30px; }
 	@include respond-to(mobile) { font-size: emCal(18px); line-height: 24px; }
 }
 h4 {font-size: emCal(18px); line-height: 28px; @include RobotoMed(); color:$drkgrey; }
 h5 {font-size: emCal(16px); line-height: 25px; @include RobotoMed(); color:$drkgrey; }
 h6 {font-size: emCal(14px); line-height: 20px; @include RobotoBk(); color:$drkgrey; }
 p { font-size: emCal(20px); line-height: 30px; color: $mdgrey;
-	@include respond-to(mobile) {
-		font-size: emCal(16px); line-height: 24px;
-	}
+	@include respond-to(tablet) { font-size: emCal(18px); line-height: 25px; }
+	@include respond-to(mobile) { font-size: emCal(16px); line-height: 24px; }
 }
 
 .rbldup { @include RobotoBold(); font-size: emCal(13px); line-height: 13px; letter-spacing: 0.75px; text-transform: uppercase; }

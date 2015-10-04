@@ -103,7 +103,7 @@ header {
 
     &.open {
       @include respond-to(mobile) {
-        height: 260px;
+        height: 300px;
       }
     }
 
