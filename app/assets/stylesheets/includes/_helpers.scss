@@ -168,12 +168,12 @@ $icons-2x: sprite-map("icons2x/*.png", $layout: smart);
     }
 
 
-    @media all and (-webkit-min-device-pixel-ratio: 2) and (max-width: 575px),
-    all and (   min--moz-device-pixel-ratio: 2)      and (max-width: 575px),
-    all and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 575px),
-    all and (        min-device-pixel-ratio: 2)      and (max-width: 575px),
-    all and (                min-resolution: 192dpi) and (max-width: 575px),
-    all and (                min-resolution: 2dppx)  and (max-width: 575px) {
+    @media all and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+    all and (   min--moz-device-pixel-ratio: 2)      and (max-width: 767px),
+    all and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 767px),
+    all and (        min-device-pixel-ratio: 2)      and (max-width: 767px),
+    all and (                min-resolution: 192dpi) and (max-width: 767px),
+    all and (                min-resolution: 2dppx)  and (max-width: 767px) {
       background-image: sprite-url($icons-2x) !important;
       background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2) !important;
       background-position: round(nth(sprite-position($icons-2x, ($sprite + "-" + $small_ext)), 1) / 2) round(nth(sprite-position($icons-2x, ($sprite + "-" + $small_ext)), 2) / 2) !important;
